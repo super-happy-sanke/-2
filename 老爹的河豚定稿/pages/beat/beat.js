@@ -14,27 +14,6 @@ num:"",
     this.setData({
       value:a
     })
-    //欺骗性POST
-    wx.request({
-      url: "https://api.heclouds.com/devices/562232361/datapoints",
-      method: "POST",
-      data: {
-        "datastreams": [{
-          "id": "beats",
-          "datapoints": [{
-            "at": "",
-            "value": this.data.value
-          },
-          ]
-        }
-        ]
-      },
-      header: {
-        "api-key": "U1g7AprTKDMSPAJXxyo0Y8uNv6M="
-      },
-      success: function (res) {
-      }
-    })
     //获取onenet数据
     var that=this
     wx.request({
